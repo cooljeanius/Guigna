@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C515C6DC1477942100B526BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515C6DB1477942100B526BD /* Cocoa.framework */; };
+		C515C6E61477942100B526BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C515C6E41477942100B526BD /* InfoPlist.strings */; };
+		C515C6E81477942200B526BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C515C6E71477942200B526BD /* main.m */; };
+		C515C6EC1477942200B526BD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C515C6EA1477942200B526BD /* Credits.rtf */; };
+		C515C6EF1477942200B526BD /* GuignaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C515C6EE1477942200B526BD /* GuignaAppDelegate.m */; };
+		C515C6F51477942200B526BD /* Guigna.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C515C6F31477942200B526BD /* Guigna.xcdatamodeld */; };
+		C515C6FC147794EC00B526BD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C515C6FB147794EC00B526BD /* WebKit.framework */; };
+		C515C7021477958500B526BD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C515C7011477958500B526BD /* MainMenu.xib */; };
+		C515C71C1477975900B526BD /* source-appshopper.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7091477975900B526BD /* source-appshopper.tiff */; };
+		C515C71D1477975900B526BD /* system-fink.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70A1477975900B526BD /* system-fink.tiff */; };
+		C515C71E1477975900B526BD /* system-freebsd.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70B1477975900B526BD /* system-freebsd.tiff */; };
+		C515C71F1477975900B526BD /* system-homebrew.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70C1477975900B526BD /* system-homebrew.tiff */; };
+		C515C7201477975900B526BD /* system-macports.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70D1477975900B526BD /* system-macports.tiff */; };
+		C515C7211477975900B526BD /* source-macupdate.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70E1477975900B526BD /* source-macupdate.tiff */; };
+		C515C7221477975900B526BD /* system-pkgsrc.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C70F1477975900B526BD /* system-pkgsrc.tiff */; };
+		C515C7231477975900B526BD /* source-versiontracker.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7101477975900B526BD /* source-versiontracker.tiff */; };
+		C515C7241477975900B526BD /* toolbar-apply.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7111477975900B526BD /* toolbar-apply.tiff */; };
+		C515C7251477975900B526BD /* toolbar-mark.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7121477975900B526BD /* toolbar-mark.tiff */; };
+		C515C7261477975900B526BD /* toolbar-shell.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7131477975900B526BD /* toolbar-shell.tiff */; };
+		C515C7271477975900B526BD /* toolbar-stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7141477975900B526BD /* toolbar-stop.tiff */; };
+		C515C7281477975900B526BD /* toolbar-sync.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C515C7151477975900B526BD /* toolbar-sync.tiff */; };
+		C515C7291477975900B526BD /* guigna.icns in Resources */ = {isa = PBXBuildFile; fileRef = C515C7161477975900B526BD /* guigna.icns */; };
+		C51C1B3C14CEBA6D00EC7D47 /* system-rudix.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C51C1B3B14CEBA6D00EC7D47 /* system-rudix.tiff */; };
+		C51C1B3F14CF195100EC7D47 /* source-native.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C51C1B3E14CF195100EC7D47 /* source-native.tiff */; };
+		C51C1B4214CF4F2100EC7D47 /* GNative.m in Sources */ = {isa = PBXBuildFile; fileRef = C51C1B4114CF4F2000EC7D47 /* GNative.m */; };
+		C51C1B4A14D14D0E00EC7D47 /* GRudix.m in Sources */ = {isa = PBXBuildFile; fileRef = C51C1B4914D14D0E00EC7D47 /* GRudix.m */; };
+		C5293A9614CD053E00D3AB13 /* status-new.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C5293A9514CD053E00D3AB13 /* status-new.tiff */; };
+		C532A6FC14BA51CB0070DB02 /* source-freecode.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C532A6FB14BA51CB0070DB02 /* source-freecode.tiff */; };
+		C5450B451589DC90008F94C0 /* GMacPortsOrg.m in Sources */ = {isa = PBXBuildFile; fileRef = C5450B441589DC90008F94C0 /* GMacPortsOrg.m */; };
+		C5657D2E14BB0A2600B6D621 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = C5657D2D14BB0A2600B6D621 /* TODO.txt */; };
+		C5657D3114BC9A4500B6D621 /* system-macosx.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C5657D3014BC9A4500B6D621 /* system-macosx.tiff */; };
+		C56792D9148614BC000D347D /* GItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792D8148614BC000D347D /* GItem.m */; };
+		C56792DD148614E1000D347D /* GPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792DC148614E1000D347D /* GPackage.m */; };
+		C56792E014861513000D347D /* GSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792DF14861513000D347D /* GSource.m */; };
+		C56792E314861539000D347D /* GSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792E214861539000D347D /* GSystem.m */; };
+		C56792E614861583000D347D /* GRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792E514861583000D347D /* GRepo.m */; };
+		C56792E914861612000D347D /* GHomebrew.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792E814861612000D347D /* GHomebrew.m */; };
+		C56792EC14861631000D347D /* GMacPorts.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792EB14861631000D347D /* GMacPorts.m */; };
+		C56792EF14861667000D347D /* GuignaAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = C56792EE14861667000D347D /* GuignaAgent.m */; };
+		C57398F114C8B437004E1B0D /* status-updated.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C57398F014C8B437004E1B0D /* status-updated.tiff */; };
+		C57398F514C93CFF004E1B0D /* GPkgsrcSE.m in Sources */ = {isa = PBXBuildFile; fileRef = C57398F414C93CFF004E1B0D /* GPkgsrcSE.m */; };
+		C57398F714C94CA3004E1B0D /* source-pkgsrc.se.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C57398F614C94CA3004E1B0D /* source-pkgsrc.se.tiff */; };
+		C575C26914A8A9BB007BEF5F /* GAppShopper.m in Sources */ = {isa = PBXBuildFile; fileRef = C575C26814A8A9BB007BEF5F /* GAppShopper.m */; };
+		C584457C14F7EC1500834EEA /* GGtkOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = C584457B14F7EC1400834EEA /* GGtkOSX.m */; };
+		C59EE97A16104CD200CFF7FE /* system-cocoapods.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C59EE97916104CD200CFF7FE /* system-cocoapods.tiff */; };
+		C59EE97D16104D5200CFF7FE /* GCocoaPods.h in Resources */ = {isa = PBXBuildFile; fileRef = C59EE97C16104D5200CFF7FE /* GCocoaPods.h */; };
+		C59EE97F16104D7A00CFF7FE /* GCocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = C59EE97E16104D7A00CFF7FE /* GCocoaPods.m */; };
+		C5A212F01493DFEF005B202F /* GScrape.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A212EF1493DFEE005B202F /* GScrape.m */; };
+		C5AC59FA14B63B2500A6128D /* GFink.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC59F914B63B2500A6128D /* GFink.m */; };
+		C5AC59FD14B63B4200A6128D /* GPkgsrc.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC59FC14B63B4200A6128D /* GPkgsrc.m */; };
+		C5AC5A0014B63B5D00A6128D /* GFreeBSD.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC59FF14B63B5D00A6128D /* GFreeBSD.m */; };
+		C5AC5A0314B7280400A6128D /* GVersionTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC5A0214B7280400A6128D /* GVersionTracker.m */; };
+		C5AC5A0614B7282000A6128D /* GFreecode.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC5A0514B7282000A6128D /* GFreecode.m */; };
+		C5AC5A0D14B7335600A6128D /* GMacOSX.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC5A0C14B7335600A6128D /* GMacOSX.m */; };
+		C5B0FB1014C6D3D600391B63 /* GTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B0FB0F14C6D3D500391B63 /* GTask.m */; };
+		C5D4DBAD150376C0000AA96F /* system-gtkosx.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C5D4DBAC150376C0000AA96F /* system-gtkosx.tiff */; };
+		C5F3427915022D2200D7AFA7 /* system-gentoo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = C5F3427815022D2200D7AFA7 /* system-gentoo.tiff */; };
+		C5F3427D15022D9800D7AFA7 /* GGentoo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F3427C15022D9800D7AFA7 /* GGentoo.m */; };
+		C5F3D55714AC40F7001066FB /* GAppShopperIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F3D55614AC40F7001066FB /* GAppShopperIOS.m */; };
+		C5F3D56114AD0131001066FB /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F3D56014AD0131001066FB /* ScriptingBridge.framework */; };
+		C5F3D56414ADA1B3001066FB /* GMacUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F3D56314ADA1B3001066FB /* GMacUpdate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C515C6D71477942100B526BD /* Guigna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guigna.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C515C6DB1477942100B526BD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C515C6DE1477942100B526BD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C515C6DF1477942100B526BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C515C6E01477942100B526BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C515C6E31477942100B526BD /* Guigna-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Guigna-Info.plist"; sourceTree = "<group>"; };
+		C515C6E51477942100B526BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C515C6E71477942200B526BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C515C6E91477942200B526BD /* Guigna-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guigna-Prefix.pch"; sourceTree = "<group>"; };
+		C515C6EB1477942200B526BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C515C6ED1477942200B526BD /* GuignaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuignaAppDelegate.h; sourceTree = "<group>"; };
+		C515C6EE1477942200B526BD /* GuignaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuignaAppDelegate.m; sourceTree = "<group>"; };
+		C515C6F41477942200B526BD /* Guigna.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guigna.xcdatamodel; sourceTree = "<group>"; };
+		C515C6FB147794EC00B526BD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C515C7011477958500B526BD /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		C515C7091477975900B526BD /* source-appshopper.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-appshopper.tiff"; sourceTree = "<group>"; };
+		C515C70A1477975900B526BD /* system-fink.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-fink.tiff"; sourceTree = "<group>"; };
+		C515C70B1477975900B526BD /* system-freebsd.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-freebsd.tiff"; sourceTree = "<group>"; };
+		C515C70C1477975900B526BD /* system-homebrew.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-homebrew.tiff"; sourceTree = "<group>"; };
+		C515C70D1477975900B526BD /* system-macports.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-macports.tiff"; sourceTree = "<group>"; };
+		C515C70E1477975900B526BD /* source-macupdate.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-macupdate.tiff"; sourceTree = "<group>"; };
+		C515C70F1477975900B526BD /* system-pkgsrc.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-pkgsrc.tiff"; sourceTree = "<group>"; };
+		C515C7101477975900B526BD /* source-versiontracker.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-versiontracker.tiff"; sourceTree = "<group>"; };
+		C515C7111477975900B526BD /* toolbar-apply.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "toolbar-apply.tiff"; sourceTree = "<group>"; };
+		C515C7121477975900B526BD /* toolbar-mark.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "toolbar-mark.tiff"; sourceTree = "<group>"; };
+		C515C7131477975900B526BD /* toolbar-shell.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "toolbar-shell.tiff"; sourceTree = "<group>"; };
+		C515C7141477975900B526BD /* toolbar-stop.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "toolbar-stop.tiff"; sourceTree = "<group>"; };
+		C515C7151477975900B526BD /* toolbar-sync.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "toolbar-sync.tiff"; sourceTree = "<group>"; };
+		C515C7161477975900B526BD /* guigna.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = guigna.icns; sourceTree = "<group>"; };
+		C51C1B3B14CEBA6D00EC7D47 /* system-rudix.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-rudix.tiff"; sourceTree = "<group>"; };
+		C51C1B3E14CF195100EC7D47 /* source-native.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-native.tiff"; sourceTree = "<group>"; };
+		C51C1B4014CF4F1F00EC7D47 /* GNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNative.h; sourceTree = "<group>"; };
+		C51C1B4114CF4F2000EC7D47 /* GNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNative.m; sourceTree = "<group>"; };
+		C51C1B4814D14D0E00EC7D47 /* GRudix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRudix.h; sourceTree = "<group>"; };
+		C51C1B4914D14D0E00EC7D47 /* GRudix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRudix.m; sourceTree = "<group>"; };
+		C5293A9514CD053E00D3AB13 /* status-new.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "status-new.tiff"; sourceTree = "<group>"; };
+		C532A6FB14BA51CB0070DB02 /* source-freecode.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-freecode.tiff"; sourceTree = "<group>"; };
+		C5450B431589DC90008F94C0 /* GMacPortsOrg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMacPortsOrg.h; sourceTree = "<group>"; };
+		C5450B441589DC90008F94C0 /* GMacPortsOrg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMacPortsOrg.m; sourceTree = "<group>"; };
+		C5657D2D14BB0A2600B6D621 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO.txt; path = Guigna/TODO.txt; sourceTree = "<group>"; };
+		C5657D3014BC9A4500B6D621 /* system-macosx.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-macosx.tiff"; sourceTree = "<group>"; };
+		C56792D7148614BC000D347D /* GItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GItem.h; sourceTree = "<group>"; };
+		C56792D8148614BC000D347D /* GItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GItem.m; sourceTree = "<group>"; };
+		C56792DB148614E1000D347D /* GPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPackage.h; sourceTree = "<group>"; };
+		C56792DC148614E1000D347D /* GPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPackage.m; sourceTree = "<group>"; };
+		C56792DE14861513000D347D /* GSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSource.h; sourceTree = "<group>"; };
+		C56792DF14861513000D347D /* GSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSource.m; sourceTree = "<group>"; };
+		C56792E114861539000D347D /* GSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSystem.h; sourceTree = "<group>"; };
+		C56792E214861539000D347D /* GSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSystem.m; sourceTree = "<group>"; };
+		C56792E414861583000D347D /* GRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRepo.h; sourceTree = "<group>"; };
+		C56792E514861583000D347D /* GRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRepo.m; sourceTree = "<group>"; };
+		C56792E714861611000D347D /* GHomebrew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHomebrew.h; sourceTree = "<group>"; };
+		C56792E814861612000D347D /* GHomebrew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHomebrew.m; sourceTree = "<group>"; };
+		C56792EA14861631000D347D /* GMacPorts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMacPorts.h; sourceTree = "<group>"; };
+		C56792EB14861631000D347D /* GMacPorts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMacPorts.m; sourceTree = "<group>"; };
+		C56792ED14861667000D347D /* GuignaAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuignaAgent.h; sourceTree = "<group>"; };
+		C56792EE14861667000D347D /* GuignaAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuignaAgent.m; sourceTree = "<group>"; };
+		C57398F014C8B437004E1B0D /* status-updated.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "status-updated.tiff"; sourceTree = "<group>"; };
+		C57398F314C93CFF004E1B0D /* GPkgsrcSE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPkgsrcSE.h; sourceTree = "<group>"; };
+		C57398F414C93CFF004E1B0D /* GPkgsrcSE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPkgsrcSE.m; sourceTree = "<group>"; };
+		C57398F614C94CA3004E1B0D /* source-pkgsrc.se.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "source-pkgsrc.se.tiff"; sourceTree = "<group>"; };
+		C575C26714A8A9BB007BEF5F /* GAppShopper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAppShopper.h; sourceTree = "<group>"; };
+		C575C26814A8A9BB007BEF5F /* GAppShopper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAppShopper.m; sourceTree = "<group>"; };
+		C584457A14F7EC1400834EEA /* GGtkOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGtkOSX.h; sourceTree = "<group>"; };
+		C584457B14F7EC1400834EEA /* GGtkOSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGtkOSX.m; sourceTree = "<group>"; };
+		C59EE97916104CD200CFF7FE /* system-cocoapods.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-cocoapods.tiff"; sourceTree = "<group>"; };
+		C59EE97C16104D5200CFF7FE /* GCocoaPods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCocoaPods.h; sourceTree = "<group>"; };
+		C59EE97E16104D7A00CFF7FE /* GCocoaPods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCocoaPods.m; sourceTree = "<group>"; };
+		C5A212EE1493DFEE005B202F /* GScrape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GScrape.h; sourceTree = "<group>"; };
+		C5A212EF1493DFEE005B202F /* GScrape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GScrape.m; sourceTree = "<group>"; };
+		C5AC59F114B5A0C600A6128D /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Safari.h; sourceTree = "<group>"; };
+		C5AC59F214B5A0C600A6128D /* Terminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terminal.h; sourceTree = "<group>"; };
+		C5AC59F814B63B2400A6128D /* GFink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFink.h; sourceTree = "<group>"; };
+		C5AC59F914B63B2500A6128D /* GFink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFink.m; sourceTree = "<group>"; };
+		C5AC59FB14B63B4200A6128D /* GPkgsrc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPkgsrc.h; sourceTree = "<group>"; };
+		C5AC59FC14B63B4200A6128D /* GPkgsrc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPkgsrc.m; sourceTree = "<group>"; };
+		C5AC59FE14B63B5D00A6128D /* GFreeBSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFreeBSD.h; sourceTree = "<group>"; };
+		C5AC59FF14B63B5D00A6128D /* GFreeBSD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFreeBSD.m; sourceTree = "<group>"; };
+		C5AC5A0114B7280400A6128D /* GVersionTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVersionTracker.h; sourceTree = "<group>"; };
+		C5AC5A0214B7280400A6128D /* GVersionTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVersionTracker.m; sourceTree = "<group>"; };
+		C5AC5A0414B7282000A6128D /* GFreecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFreecode.h; sourceTree = "<group>"; };
+		C5AC5A0514B7282000A6128D /* GFreecode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFreecode.m; sourceTree = "<group>"; };
+		C5AC5A0B14B7335600A6128D /* GMacOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMacOSX.h; sourceTree = "<group>"; };
+		C5AC5A0C14B7335600A6128D /* GMacOSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMacOSX.m; sourceTree = "<group>"; };
+		C5B0FB0E14C6D3D500391B63 /* GTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTask.h; sourceTree = "<group>"; };
+		C5B0FB0F14C6D3D500391B63 /* GTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTask.m; sourceTree = "<group>"; };
+		C5D4DBAC150376C0000AA96F /* system-gtkosx.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-gtkosx.tiff"; sourceTree = "<group>"; };
+		C5F3427815022D2200D7AFA7 /* system-gentoo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "system-gentoo.tiff"; sourceTree = "<group>"; };
+		C5F3427B15022D9800D7AFA7 /* GGentoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGentoo.h; sourceTree = "<group>"; };
+		C5F3427C15022D9800D7AFA7 /* GGentoo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGentoo.m; sourceTree = "<group>"; };
+		C5F3D55514AC40F7001066FB /* GAppShopperIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAppShopperIOS.h; sourceTree = "<group>"; };
+		C5F3D55614AC40F7001066FB /* GAppShopperIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAppShopperIOS.m; sourceTree = "<group>"; };
+		C5F3D56014AD0131001066FB /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		C5F3D56214ADA1B3001066FB /* GMacUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMacUpdate.h; sourceTree = "<group>"; };
+		C5F3D56314ADA1B3001066FB /* GMacUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMacUpdate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C515C6D41477942100B526BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C515C6DC1477942100B526BD /* Cocoa.framework in Frameworks */,
+				C515C6FC147794EC00B526BD /* WebKit.framework in Frameworks */,
+				C5F3D56114AD0131001066FB /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C515C6CC1477942100B526BD = {
+			isa = PBXGroup;
+			children = (
+				C5657D2D14BB0A2600B6D621 /* TODO.txt */,
+				C515C6E11477942100B526BD /* Guigna */,
+				C515C6DA1477942100B526BD /* Frameworks */,
+				C515C6D81477942100B526BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C515C6D81477942100B526BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C515C6D71477942100B526BD /* Guigna.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C515C6DA1477942100B526BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C515C6DB1477942100B526BD /* Cocoa.framework */,
+				C515C6FB147794EC00B526BD /* WebKit.framework */,
+				C5F3D56014AD0131001066FB /* ScriptingBridge.framework */,
+				C515C6DD1477942100B526BD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C515C6DD1477942100B526BD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C515C6DE1477942100B526BD /* AppKit.framework */,
+				C515C6DF1477942100B526BD /* CoreData.framework */,
+				C515C6E01477942100B526BD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C515C6E11477942100B526BD /* Guigna */ = {
+			isa = PBXGroup;
+			children = (
+				C515C6ED1477942200B526BD /* GuignaAppDelegate.h */,
+				C515C6EE1477942200B526BD /* GuignaAppDelegate.m */,
+				C56792ED14861667000D347D /* GuignaAgent.h */,
+				C56792EE14861667000D347D /* GuignaAgent.m */,
+				C56792D7148614BC000D347D /* GItem.h */,
+				C56792D8148614BC000D347D /* GItem.m */,
+				C56792DB148614E1000D347D /* GPackage.h */,
+				C56792DC148614E1000D347D /* GPackage.m */,
+				C56792DE14861513000D347D /* GSource.h */,
+				C56792DF14861513000D347D /* GSource.m */,
+				C5A212EE1493DFEE005B202F /* GScrape.h */,
+				C5A212EF1493DFEE005B202F /* GScrape.m */,
+				C56792E114861539000D347D /* GSystem.h */,
+				C56792E214861539000D347D /* GSystem.m */,
+				C56792E414861583000D347D /* GRepo.h */,
+				C56792E514861583000D347D /* GRepo.m */,
+				C5B0FB0E14C6D3D500391B63 /* GTask.h */,
+				C5B0FB0F14C6D3D500391B63 /* GTask.m */,
+				C515C7011477958500B526BD /* MainMenu.xib */,
+				C515C6F31477942200B526BD /* Guigna.xcdatamodeld */,
+				C575C26A14A8BCDD007BEF5F /* Systems */,
+				C51C1B4314CF4F2D00EC7D47 /* Repos */,
+				C575C26614A8A8F5007BEF5F /* Scrapes */,
+				C515C7031477972400B526BD /* Images */,
+				C515C6E21477942100B526BD /* Supporting Files */,
+			);
+			path = Guigna;
+			sourceTree = "<group>";
+		};
+		C515C6E21477942100B526BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C515C6E31477942100B526BD /* Guigna-Info.plist */,
+				C515C6E41477942100B526BD /* InfoPlist.strings */,
+				C515C6E71477942200B526BD /* main.m */,
+				C515C6E91477942200B526BD /* Guigna-Prefix.pch */,
+				C515C6EA1477942200B526BD /* Credits.rtf */,
+				C5AC59F114B5A0C600A6128D /* Safari.h */,
+				C5AC59F214B5A0C600A6128D /* Terminal.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C515C7031477972400B526BD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C57398F014C8B437004E1B0D /* status-updated.tiff */,
+				C5293A9514CD053E00D3AB13 /* status-new.tiff */,
+				C515C70D1477975900B526BD /* system-macports.tiff */,
+				C515C70C1477975900B526BD /* system-homebrew.tiff */,
+				C59EE97916104CD200CFF7FE /* system-cocoapods.tiff */,
+				C5657D3014BC9A4500B6D621 /* system-macosx.tiff */,
+				C515C70A1477975900B526BD /* system-fink.tiff */,
+				C515C70F1477975900B526BD /* system-pkgsrc.tiff */,
+				C515C70B1477975900B526BD /* system-freebsd.tiff */,
+				C5F3427815022D2200D7AFA7 /* system-gentoo.tiff */,
+				C5D4DBAC150376C0000AA96F /* system-gtkosx.tiff */,
+				C51C1B3B14CEBA6D00EC7D47 /* system-rudix.tiff */,
+				C515C7091477975900B526BD /* source-appshopper.tiff */,
+				C532A6FB14BA51CB0070DB02 /* source-freecode.tiff */,
+				C51C1B3E14CF195100EC7D47 /* source-native.tiff */,
+				C57398F614C94CA3004E1B0D /* source-pkgsrc.se.tiff */,
+				C515C70E1477975900B526BD /* source-macupdate.tiff */,
+				C515C7101477975900B526BD /* source-versiontracker.tiff */,
+				C515C7111477975900B526BD /* toolbar-apply.tiff */,
+				C515C7121477975900B526BD /* toolbar-mark.tiff */,
+				C515C7131477975900B526BD /* toolbar-shell.tiff */,
+				C515C7141477975900B526BD /* toolbar-stop.tiff */,
+				C515C7151477975900B526BD /* toolbar-sync.tiff */,
+				C515C7161477975900B526BD /* guigna.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C51C1B4314CF4F2D00EC7D47 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				C51C1B4814D14D0E00EC7D47 /* GRudix.h */,
+				C51C1B4914D14D0E00EC7D47 /* GRudix.m */,
+				C51C1B4014CF4F1F00EC7D47 /* GNative.h */,
+				C51C1B4114CF4F2000EC7D47 /* GNative.m */,
+				C5450B431589DC90008F94C0 /* GMacPortsOrg.h */,
+				C5450B441589DC90008F94C0 /* GMacPortsOrg.m */,
+			);
+			name = Repos;
+			sourceTree = "<group>";
+		};
+		C575C26614A8A8F5007BEF5F /* Scrapes */ = {
+			isa = PBXGroup;
+			children = (
+				C575C26714A8A9BB007BEF5F /* GAppShopper.h */,
+				C575C26814A8A9BB007BEF5F /* GAppShopper.m */,
+				C5F3D55514AC40F7001066FB /* GAppShopperIOS.h */,
+				C5F3D55614AC40F7001066FB /* GAppShopperIOS.m */,
+				C5F3D56214ADA1B3001066FB /* GMacUpdate.h */,
+				C5F3D56314ADA1B3001066FB /* GMacUpdate.m */,
+				C5AC5A0114B7280400A6128D /* GVersionTracker.h */,
+				C5AC5A0214B7280400A6128D /* GVersionTracker.m */,
+				C5AC5A0414B7282000A6128D /* GFreecode.h */,
+				C5AC5A0514B7282000A6128D /* GFreecode.m */,
+				C57398F314C93CFF004E1B0D /* GPkgsrcSE.h */,
+				C57398F414C93CFF004E1B0D /* GPkgsrcSE.m */,
+			);
+			name = Scrapes;
+			sourceTree = "<group>";
+		};
+		C575C26A14A8BCDD007BEF5F /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				C56792E714861611000D347D /* GHomebrew.h */,
+				C56792E814861612000D347D /* GHomebrew.m */,
+				C56792EA14861631000D347D /* GMacPorts.h */,
+				C56792EB14861631000D347D /* GMacPorts.m */,
+				C59EE97C16104D5200CFF7FE /* GCocoaPods.h */,
+				C59EE97E16104D7A00CFF7FE /* GCocoaPods.m */,
+				C5AC5A0B14B7335600A6128D /* GMacOSX.h */,
+				C5AC5A0C14B7335600A6128D /* GMacOSX.m */,
+				C5AC59F814B63B2400A6128D /* GFink.h */,
+				C5AC59F914B63B2500A6128D /* GFink.m */,
+				C5AC59FB14B63B4200A6128D /* GPkgsrc.h */,
+				C5AC59FC14B63B4200A6128D /* GPkgsrc.m */,
+				C5AC59FE14B63B5D00A6128D /* GFreeBSD.h */,
+				C5AC59FF14B63B5D00A6128D /* GFreeBSD.m */,
+				C584457A14F7EC1400834EEA /* GGtkOSX.h */,
+				C584457B14F7EC1400834EEA /* GGtkOSX.m */,
+				C5F3427B15022D9800D7AFA7 /* GGentoo.h */,
+				C5F3427C15022D9800D7AFA7 /* GGentoo.m */,
+			);
+			name = Systems;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C515C6D61477942100B526BD /* Guigna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C515C6F81477942200B526BD /* Build configuration list for PBXNativeTarget "Guigna" */;
+			buildPhases = (
+				C515C6D31477942100B526BD /* Sources */,
+				C515C6D41477942100B526BD /* Frameworks */,
+				C515C6D51477942100B526BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Guigna;
+			productName = Guigna;
+			productReference = C515C6D71477942100B526BD /* Guigna.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C515C6CE1477942100B526BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = C515C6D11477942100B526BD /* Build configuration list for PBXProject "Guigna" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C515C6CC1477942100B526BD;
+			productRefGroup = C515C6D81477942100B526BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C515C6D61477942100B526BD /* Guigna */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C515C6D51477942100B526BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C515C6E61477942100B526BD /* InfoPlist.strings in Resources */,
+				C515C6EC1477942200B526BD /* Credits.rtf in Resources */,
+				C515C7021477958500B526BD /* MainMenu.xib in Resources */,
+				C515C71C1477975900B526BD /* source-appshopper.tiff in Resources */,
+				C515C71D1477975900B526BD /* system-fink.tiff in Resources */,
+				C515C71E1477975900B526BD /* system-freebsd.tiff in Resources */,
+				C515C71F1477975900B526BD /* system-homebrew.tiff in Resources */,
+				C515C7201477975900B526BD /* system-macports.tiff in Resources */,
+				C515C7211477975900B526BD /* source-macupdate.tiff in Resources */,
+				C515C7221477975900B526BD /* system-pkgsrc.tiff in Resources */,
+				C515C7231477975900B526BD /* source-versiontracker.tiff in Resources */,
+				C515C7241477975900B526BD /* toolbar-apply.tiff in Resources */,
+				C515C7251477975900B526BD /* toolbar-mark.tiff in Resources */,
+				C515C7261477975900B526BD /* toolbar-shell.tiff in Resources */,
+				C515C7271477975900B526BD /* toolbar-stop.tiff in Resources */,
+				C515C7281477975900B526BD /* toolbar-sync.tiff in Resources */,
+				C515C7291477975900B526BD /* guigna.icns in Resources */,
+				C532A6FC14BA51CB0070DB02 /* source-freecode.tiff in Resources */,
+				C5657D2E14BB0A2600B6D621 /* TODO.txt in Resources */,
+				C5657D3114BC9A4500B6D621 /* system-macosx.tiff in Resources */,
+				C57398F114C8B437004E1B0D /* status-updated.tiff in Resources */,
+				C57398F714C94CA3004E1B0D /* source-pkgsrc.se.tiff in Resources */,
+				C5293A9614CD053E00D3AB13 /* status-new.tiff in Resources */,
+				C51C1B3C14CEBA6D00EC7D47 /* system-rudix.tiff in Resources */,
+				C51C1B3F14CF195100EC7D47 /* source-native.tiff in Resources */,
+				C5F3427915022D2200D7AFA7 /* system-gentoo.tiff in Resources */,
+				C5D4DBAD150376C0000AA96F /* system-gtkosx.tiff in Resources */,
+				C59EE97A16104CD200CFF7FE /* system-cocoapods.tiff in Resources */,
+				C59EE97D16104D5200CFF7FE /* GCocoaPods.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C515C6D31477942100B526BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C515C6E81477942200B526BD /* main.m in Sources */,
+				C515C6EF1477942200B526BD /* GuignaAppDelegate.m in Sources */,
+				C515C6F51477942200B526BD /* Guigna.xcdatamodeld in Sources */,
+				C56792D9148614BC000D347D /* GItem.m in Sources */,
+				C56792DD148614E1000D347D /* GPackage.m in Sources */,
+				C56792E014861513000D347D /* GSource.m in Sources */,
+				C56792E314861539000D347D /* GSystem.m in Sources */,
+				C56792E614861583000D347D /* GRepo.m in Sources */,
+				C56792E914861612000D347D /* GHomebrew.m in Sources */,
+				C56792EC14861631000D347D /* GMacPorts.m in Sources */,
+				C56792EF14861667000D347D /* GuignaAgent.m in Sources */,
+				C5A212F01493DFEF005B202F /* GScrape.m in Sources */,
+				C575C26914A8A9BB007BEF5F /* GAppShopper.m in Sources */,
+				C5F3D55714AC40F7001066FB /* GAppShopperIOS.m in Sources */,
+				C5F3D56414ADA1B3001066FB /* GMacUpdate.m in Sources */,
+				C5AC59FA14B63B2500A6128D /* GFink.m in Sources */,
+				C5AC59FD14B63B4200A6128D /* GPkgsrc.m in Sources */,
+				C5AC5A0014B63B5D00A6128D /* GFreeBSD.m in Sources */,
+				C5AC5A0314B7280400A6128D /* GVersionTracker.m in Sources */,
+				C5AC5A0614B7282000A6128D /* GFreecode.m in Sources */,
+				C5AC5A0D14B7335600A6128D /* GMacOSX.m in Sources */,
+				C5B0FB1014C6D3D600391B63 /* GTask.m in Sources */,
+				C57398F514C93CFF004E1B0D /* GPkgsrcSE.m in Sources */,
+				C51C1B4214CF4F2100EC7D47 /* GNative.m in Sources */,
+				C51C1B4A14D14D0E00EC7D47 /* GRudix.m in Sources */,
+				C584457C14F7EC1500834EEA /* GGtkOSX.m in Sources */,
+				C5F3427D15022D9800D7AFA7 /* GGentoo.m in Sources */,
+				C5450B451589DC90008F94C0 /* GMacPortsOrg.m in Sources */,
+				C59EE97F16104D7A00CFF7FE /* GCocoaPods.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C515C6E41477942100B526BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C515C6E51477942100B526BD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C515C6EA1477942200B526BD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C515C6EB1477942200B526BD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C515C6F61477942200B526BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_ERRORS = YES;
+				IBC_NOTICES = YES;
+				IBC_WARNINGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		C515C6F71477942200B526BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_ERRORS = YES;
+				IBC_NOTICES = YES;
+				IBC_WARNINGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		C515C6F91477942200B526BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guigna/Guigna-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = "Guigna/Guigna-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C515C6FA1477942200B526BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Guigna/Guigna-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				INFOPLIST_FILE = "Guigna/Guigna-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C515C6D11477942100B526BD /* Build configuration list for PBXProject "Guigna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C515C6F61477942200B526BD /* Debug */,
+				C515C6F71477942200B526BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C515C6F81477942200B526BD /* Build configuration list for PBXNativeTarget "Guigna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C515C6F91477942200B526BD /* Debug */,
+				C515C6FA1477942200B526BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C515C6F31477942200B526BD /* Guigna.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C515C6F41477942200B526BD /* Guigna.xcdatamodel */,
+			);
+			currentVersion = C515C6F41477942200B526BD /* Guigna.xcdatamodel */;
+			path = Guigna.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C515C6CE1477942100B526BD /* Project object */;
+}

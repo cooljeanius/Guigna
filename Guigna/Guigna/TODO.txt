@@ -1,0 +1,48 @@
+FIXME
+
+Empty Updated source because of partial allPackages
+kCGErrorIllegalArgument: CGSSetTrackingAreaShape
+Memory peak after adding a system without first selecting other sources
+Don't show uninstalled Mac OS X packages
+Open a new Shell if the user closed the last one
+
+
+TODO
+
+Set GOnlineMode when hiding prefixes during installs (GHiddenState)
+Dependencies analysis before Apply (MacPorts -y, Homebrew missing)
+Relaunch after installing a system
+Homebrew taps (alt, games) and bottles
+Rename selfupdate -> update
+Detect Homebrew updated formula
+Detect pkgsrc and FreeBSD INDEXes for Defaults
+pkgsrc CVS, deps and outdated
+2-minute timer for checking sudo in Terminal's title
+GPackages not GItems in GRepos
+URL property for Scrapes
+CTRL-C handling
+Multiple Terminal tabs
+Info/Details sliding panel (analysis)
+Filter history
+brew and pkgsrc options as variants
+Encoding and archiving GItems
+"Filter" context menu item
+Fink log, categories, outdated
+Pkgsrc.se CVSWeb
+FreeBSD Deps
+Freecode log->home
+moreInfo in background (GMacOSX)
+Back/Forward buttons/gestures for WebView
+NSWorkspace.sharedWorkspace.iconForFile
+Download manager
+Date column
+GTasks and terminationStatus in GuignaAgent
+port2pkg and pkgsrc wip
+http://opensourcemac.org, http://www.freesmug.org/
+http://packages.gentoo.org/arch/x64-macos?arches=prefix
+Gtk-OSX, GNOME jhbuild (dot dependencies graph)
+PyPi, RubyGems, CPAN
+pod commands
+GNOME, KDE and LAMP server pre-configurations
+Help
+
