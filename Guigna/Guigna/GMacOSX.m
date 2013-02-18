@@ -64,7 +64,7 @@
 
 - (NSArray *)availableCommands {
     return @[@"forget"];
-};
+}
 
 
 - (NSString *)info:(GItem *)item {
