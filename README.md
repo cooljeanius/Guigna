@@ -1,10 +1,7 @@
 **GUIGNA: the GUI of Guigna is Not by Apple  :)**
 
 Guigna* is the prototype of a GUI supporting Homebrew, MacPorts, Fink and pkgsrc at the same time.
-
-
-![screenshot](https://lh6.googleusercontent.com/-AYNp1X6hZrA/T4HXsnZP0FI/AAAAAAAAB4I/7mubWTRpDa4/s564/guigna-screenshot.png)
-
+This branch was originally a fork, but upstream moved their branch to [https://github.com/gui-dos/Guigna](https://github.com/gui-dos/Guigna), so now this technically isn't a fork any more...
 
 ### Design and ideas###
 Guigna was born as a single MacRuby script for personal use: it tries to
