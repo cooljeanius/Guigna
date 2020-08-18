@@ -25,10 +25,10 @@
     NSMutableArray *comments = [NSMutableArray arrayWithArray:[root nodesForXPath:@"./div" error:nil]];
     [comments removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0,2)]];
     
-    int i = 0;
+    NSUInteger i = 0U;
     for (id node in names) {
         NSString *ID = [[node nodesForXPath:@"./a" error:nil][0] stringValue];
-        NSInteger sep = [ID rangeOfString:@"/" options:NSBackwardsSearch].location;
+        NSUInteger sep = [ID rangeOfString:@"/" options:NSBackwardsSearch].location;
         NSString *name = [ID substringFromIndex:sep+1];
         NSString *category = [ID substringToIndex:sep];
         NSString *version = [dates[i] stringValue];

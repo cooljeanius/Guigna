@@ -29,58 +29,58 @@
 
 @interface GuignaAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate, NSOutlineViewDelegate,NSOutlineViewDataSource, NSTableViewDelegate, NSTableViewDataSource, NSTextViewDelegate>
 
-@property (strong) IBOutlet GuignaAgent *agent;
-@property (strong) IBOutlet NSUserDefaultsController *defaultsController;
+@property (strong, atomic) IBOutlet GuignaAgent *agent;
+@property (strong, atomic) IBOutlet NSUserDefaultsController *defaultsController;
 
-@property (strong) IBOutlet NSWindow *window;
-@property (strong) IBOutlet NSOutlineView *sourcesOutline;
-@property (strong) IBOutlet NSTableView *itemsTable;
-@property (strong) IBOutlet NSSearchField *searchField;
-@property (strong) IBOutlet NSTabView *tabView;
-@property (strong) IBOutlet NSTextView *infoText;
-@property (strong) IBOutlet WebView *webView;
-@property (strong) IBOutlet NSTextView *logText;
-@property (strong) IBOutlet NSSegmentedControl *segmentedControl;
-@property (strong) IBOutlet NSPopUpButton *commandsPopUp;
-@property (strong) IBOutlet NSButton *shellDisclosure;
-@property (strong) IBOutlet NSTextField *cmdline;
-@property (strong) IBOutlet NSTextField *statusField;
-@property (strong) IBOutlet NSButton *clearButton;
-@property (strong) IBOutlet NSTextField *statsLabel;
-@property (strong) IBOutlet NSButton *moreButton;
-@property (strong) IBOutlet NSProgressIndicator *progressIndicator;
-@property (strong) IBOutlet NSProgressIndicator *tableProgressIndicator;
-@property (strong) IBOutlet NSToolbarItem *applyButton;
-@property (strong) IBOutlet NSToolbarItem *stopButton;
+@property (strong, atomic) IBOutlet NSWindow *window;
+@property (strong, atomic) IBOutlet NSOutlineView *sourcesOutline;
+@property (strong, atomic) IBOutlet NSTableView *itemsTable;
+@property (strong, atomic) IBOutlet NSSearchField *searchField;
+@property (strong, atomic) IBOutlet NSTabView *tabView;
+@property (strong, atomic) IBOutlet NSTextView *infoText;
+@property (strong, atomic) IBOutlet WebView *webView;
+@property (strong, atomic) IBOutlet NSTextView *logText;
+@property (strong, atomic) IBOutlet NSSegmentedControl *segmentedControl;
+@property (strong, atomic) IBOutlet NSPopUpButton *commandsPopUp;
+@property (strong, atomic) IBOutlet NSButton *shellDisclosure;
+@property (strong, atomic) IBOutlet NSTextField *cmdline;
+@property (strong, atomic) IBOutlet NSTextField *statusField;
+@property (strong, atomic) IBOutlet NSButton *clearButton;
+@property (strong, atomic) IBOutlet NSTextField *statsLabel;
+@property (strong, atomic) IBOutlet NSButton *moreButton;
+@property (strong, atomic) IBOutlet NSProgressIndicator *progressIndicator;
+@property (strong, atomic) IBOutlet NSProgressIndicator *tableProgressIndicator;
+@property (strong, atomic) IBOutlet NSToolbarItem *applyButton;
+@property (strong, atomic) IBOutlet NSToolbarItem *stopButton;
 
-@property (strong) IBOutlet NSMenu *toolsMenu;
-@property (strong) IBOutlet NSMenu *markMenu;
-@property (strong) IBOutlet NSPanel *optionsPanel;
-@property (strong) IBOutlet NSProgressIndicator *optionsProgressIndicator;
-@property (strong) IBOutlet NSTextField *optionsStatusField;
+@property (strong, atomic) IBOutlet NSMenu *toolsMenu;
+@property (strong, atomic) IBOutlet NSMenu *markMenu;
+@property (strong, atomic) IBOutlet NSPanel *optionsPanel;
+@property (strong, atomic) IBOutlet NSProgressIndicator *optionsProgressIndicator;
+@property (strong, atomic) IBOutlet NSTextField *optionsStatusField;
 
-@property(strong) TerminalApplication *terminal;
-@property(strong) TerminalTab *shell;
-@property(strong) TerminalWindow *shellWindow;
-@property(strong) SafariApplication *browser;
+@property (strong, atomic) TerminalApplication *terminal;
+@property (strong, atomic) TerminalTab *shell;
+@property (strong, atomic) TerminalWindow *shellWindow;
+@property (strong, atomic) SafariApplication *browser;
 
-@property (strong) IBOutlet NSTreeController *sourcesController;
-@property (strong) IBOutlet NSArrayController *itemsController;
+@property (strong, atomic) IBOutlet NSTreeController *sourcesController;
+@property (strong, atomic) IBOutlet NSArrayController *itemsController;
 
-@property(strong) NSMutableArray *sources;
-@property(strong) NSMutableArray *systems;
-@property(strong) NSMutableArray *scrapes;
-@property(strong) NSMutableArray *repos;
+@property (strong, atomic) NSMutableArray *sources;
+@property (strong, atomic) NSMutableArray *systems;
+@property (strong, atomic) NSMutableArray *scrapes;
+@property (strong, atomic) NSMutableArray *repos;
 
-@property(strong) NSMutableArray *items;
-@property(strong) NSMutableArray *allPackages;
-@property(strong) NSMutableDictionary *packagesIndex;
-@property(strong) NSMutableArray *markedItems;
+@property (strong, atomic) NSMutableArray *items;
+@property (strong, atomic) NSMutableArray *allPackages;
+@property (strong, atomic) NSMutableDictionary *packagesIndex;
+@property (strong, atomic) NSMutableArray *markedItems;
 
-@property(readwrite) NSInteger marksCount;
-@property(strong) NSString *selectedSegment;
-@property(readwrite) NSInteger previousSegment;
-@property(strong) NSString *APPDIR;
+@property (readwrite, atomic) NSInteger marksCount;
+@property (strong, atomic) NSString *selectedSegment;
+@property (readwrite, atomic) NSInteger previousSegment;
+@property (strong, atomic) NSString *APPDIR;
 
 
 - (void)status:(NSString *)msg;

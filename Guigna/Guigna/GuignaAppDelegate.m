@@ -79,7 +79,7 @@
         [hiddenSystems addObject:@"Homebrew"];
     if ([hiddenSystems count] > 0) {
         NSString *detectedSystems = [hiddenSystems componentsJoinedByString:@" and "];
-        if (NSRunCriticalAlertPanel(@"Hidden systems detected.", [NSString stringWithFormat:@"The prefix of %@ is currently hidden by an \"_off\" suffix.", detectedSystems], @"Unhide and relauch.", @"Continue", nil) ==NSAlertDefaultReturn) {
+        if (NSRunCriticalAlertPanel(@"Hidden systems detected.", @"%@", [NSString stringWithFormat:@"The prefix of %@ is currently hidden by an \"_off\" suffix.", detectedSystems], @"Unhide and relauch.", @"Continue", nil) ==NSAlertDefaultReturn) {
             for (NSString *system in hiddenSystems) {
                 if ([system isEqualToString:@"MacPorts"])
                     [self sudo:@"mv /opt/local_off /opt/local" withBaton:@"relaunch"];
@@ -251,8 +251,8 @@
         return YES;
     }
     else {
-        NSInteger sep = [history rangeOfString:@"--->" options:NSBackwardsSearch].location;
-        NSInteger sep2 = [history rangeOfString:@"==>" options:NSBackwardsSearch].location;
+        NSUInteger sep = [history rangeOfString:@"--->" options:NSBackwardsSearch].location;
+        NSUInteger sep2 = [history rangeOfString:@"==>" options:NSBackwardsSearch].location;
         if (sep2 != NSNotFound && sep2 > sep)
             sep = sep2;
         sep2 = [history rangeOfString:@"&>/dev/null" options:NSBackwardsSearch].location;
@@ -274,13 +274,13 @@
     if ([filename isEqualToString:[@"~/Library/Application Support/Guigna/output" stringByExpandingTildeInPath]]) {
         [self status:@"Analyzing shell outputs..."];
         if ([markedItems count] > 0) {
-            GMark mark;
+            GMark mark0;
             NSString *markName;
             for (GItem *item in markedItems) {
-                mark = item.mark;
-                markName = @[@"None", @"Install", @"Uninstall", @"Deactivate", @"Upgrade", @"Fetch", @"Clean"][mark];
+                mark0 = item.mark;
+                markName = @[@"None", @"Install", @"Uninstall", @"Deactivate", @"Upgrade", @"Fetch", @"Clean"][mark0];
                 // TODO verify command did really complete
-                if (mark == GInstallMark) {
+                if (mark0 == GInstallMark) {
                     if ([item.system.name isEqualToString:@"MacPorts"]) {
                         if ([[item.system installedPackagesNamed:item.name] count] > 0) {
                             ((GPackage *)item).variants = ((GPackage *)[item.system installedPackagesNamed:item.name][0]).variants;
@@ -289,13 +289,13 @@
                     ((GPackage *)item).version = ((GPackage *)[item.system installedPackagesNamed:item.name][0]).version;
                     item.status = GUpToDateStatus;
                     
-                } else if (mark == GUninstallMark) {
+                } else if (mark0 == GUninstallMark) {
                     item.status = GAvailableStatus;
                     
-                } else if (mark == GDeactivateMark) {
+                } else if (mark0 == GDeactivateMark) {
                     item.status = GInactiveStatus;
                     
-                } else if (mark == GUpgradeMark) {
+                } else if (mark0 == GUpgradeMark) {
                     ((GPackage *)item).version = ((GPackage *)[item.system installedPackagesNamed:item.name][0]).version;
                     item.status = GUpToDateStatus;
                 }
@@ -306,16 +306,16 @@
             // update status of currently displayed items
             for (GPackage *package in items) {
                 GPackage *indexedPackage = (GPackage *)packagesIndex[[package key]];
-                GMark mark = indexedPackage.mark;
-                if (package.mark != GNoneMark && mark == GNoneMark) {
+                GMark mark1 = indexedPackage.mark;
+                if (package.mark != GNoneMark && mark1 == GNoneMark) {
                     if (!(package.mark == GFetchMark || package.mark == GCleanMark)) {
                         package.status = indexedPackage.status;
                         package.version = indexedPackage.version;
                     }
                     package.mark = GNoneMark;
                 }
-                if (mark != GNoneMark)
-                    package.mark = mark;
+                if (mark1 != GNoneMark)
+                    package.mark = mark1;
             }
             [itemsTable display];
         }
@@ -720,7 +720,7 @@
     [tabView display];
     [self status:[@"Scraping " stringByAppendingFormat:@"%@...", scrape.name]];
     NSInteger scrapesCount = [[[defaultsController values] valueForKey:@"ScrapesCount"] integerValue];
-    NSInteger pagesToScrape = ceil(scrapesCount / 1.0 / scrape.itemsPerPage);
+    NSInteger pagesToScrape = (NSInteger)ceil(scrapesCount / 1.0 / scrape.itemsPerPage);
     for (int i = 0; i < pagesToScrape; i++) {
         [itemsController addObjects:scrape.items];
         [itemsTable display];
@@ -765,7 +765,7 @@
 - (IBAction)executeCmdLine:(id)sender {
     NSArray *selectedItems = [itemsController selectedObjects];
     GItem *item = nil;
-    NSString *input, *output;
+    NSString *input, *output0;
     if ([selectedItems count] > 0)
         item = selectedItems[0];
     input = cmdline.stringValue;
@@ -788,9 +788,9 @@
                 }
             }
             if ( ![cmd hasPrefix:@"/"]) {
-                NSString *output = [agent outputForCommand:[NSString stringWithFormat:@"/usr/bin/which %@", cmd]];
-                if ([output length] != 0)
-                    tokens[0] = [output substringToIndex:[output length]-1];
+                NSString *output1 = [agent outputForCommand:[NSString stringWithFormat:@"/usr/bin/which %@", cmd]];
+                if ([output1 length] != 0)
+                    tokens[0] = [output1 substringToIndex:[output1 length]-1];
                 else
                     tokens[0] = [NSString stringWithFormat:@"/bin/sh -c %@", cmd];
                 // TODO:show stderr
@@ -798,9 +798,9 @@
             input = [tokens componentsJoinedByString:@" "];
             [self log:[NSString stringWithFormat:@"===> %@\n", input]];
             [self status:[NSString stringWithFormat:@"Executing '%@'...", input]];
-            output = [agent outputForCommand:input];
+            output0 = [agent outputForCommand:input];
             [self status:@"OK."];
-            [self log:output];
+            [self log:output0];
         }
     }
 }
@@ -1053,7 +1053,7 @@
 
 - (IBAction)apply:(id)sender {
     markedItems = [[allPackages filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"mark != 0"]] mutableCopy];
-    marksCount = [markedItems count];
+    marksCount = (NSInteger)[markedItems count];
     if (marksCount == 0)
         return;
     [applyButton setEnabled:NO];
@@ -1112,6 +1112,8 @@
                 
             } else if (mark == GCleanMark) {
                 [systemTasks addObject:[item.system cleanCmd:item]];
+            } else {
+                (void)markName;
             }
         }
         if (hidesOthers == YES && ([systems count] > 1 || [detectedPrefixes count] > 0)) {
@@ -1229,17 +1231,24 @@
         } else if ([title isEqualToString:@"MacPorts"] && [[NSFileManager defaultManager] fileExistsAtPath:@"/opt/local/bin/port"]) {
             system = [[GMacPorts alloc] initWithAgent:self.agent];
         } else if ([title isEqualToString:@"Fink"]) {
-            system = [[GFink alloc] initWithAgent:self.agent]; system.mode = GOnlineMode;
+            system = [[GFink alloc] initWithAgent:self.agent];
+            system.mode = GOnlineMode;
+            // FIXME: also handle /opt/sw/bin/fink:
             if ([[NSFileManager defaultManager] fileExistsAtPath:@"/sw/bin/fink"]) {
                 system.mode = GOfflineMode; // TODO: defaults
             }
         } else if ([title isEqualToString:@"pkgsrc"]) {
-            system = [[GPkgsrc alloc] initWithAgent:self.agent]; system.mode = GOnlineMode;
+            system = [[GPkgsrc alloc] initWithAgent:self.agent];
+            system.mode = GOnlineMode;
             if ([[NSFileManager defaultManager] fileExistsAtPath:@"/usr/pkg/sbin/pkg_info"]) {
                 system.mode = GOfflineMode;
             }
         } else if ([title isEqualToString:@"FreeBSD"]) {
-            system = [[GFreeBSD alloc] initWithAgent:self.agent]; system.mode = GOnlineMode;
+            system = [[GFreeBSD alloc] initWithAgent:self.agent];
+            system.mode = GOnlineMode;
+        } else {
+            system = (GSystem *)[NSMutableArray alloc];
+            system.mode = GOfflineMode;
         }
         [systems addObject:system];
         [itemsController addObjects:[system list]]; // FIXME: memory peak if a source has not been selected before

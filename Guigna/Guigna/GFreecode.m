@@ -21,27 +21,27 @@
     NSMutableArray *items = [NSMutableArray array];
     NSString *url = [NSString stringWithFormat:@"http://freecode.com/?page=%ld", self.pageNumber];
     NSArray *nodes = [self.agent nodesForURL:url XPath:@"//div[contains(@class,\"release\")]"];
-    for (id node in nodes) {
-        NSString *name = [[[node nodesForXPath:@"./h2/a" error:nil] lastObject] stringValue];
-        NSUInteger sep = [name rangeOfString:@" " options:NSBackwardsSearch].location;
-        NSString *version = [name substringFromIndex:sep+1];
-        name = [name substringToIndex:sep];
-        NSString *ID = [[[[[node nodesForXPath:@"./h2/a" error:nil] lastObject] attributeForName:@"href"]stringValue] lastPathComponent];
-        NSArray *moreinfo = [node nodesForXPath:@"./h2//a[contains(@class,\"moreinfo\")]" error:nil];
+    for (id node0 in nodes) {
+        NSString *name = [[[node0 nodesForXPath:@"./h2/a" error:nil] lastObject] stringValue];
+        NSUInteger sep0 = [name rangeOfString:@" " options:NSBackwardsSearch].location;
+        NSString *version = [name substringFromIndex:sep0+1];
+        name = [name substringToIndex:sep0];
+        NSString *ID = [[[[[node0 nodesForXPath:@"./h2/a" error:nil] lastObject] attributeForName:@"href"]stringValue] lastPathComponent];
+        NSArray *moreinfo = [node0 nodesForXPath:@"./h2//a[contains(@class,\"moreinfo\")]" error:nil];
         NSString *homepage;
-        if ([moreinfo count] == 0)
+        if ([moreinfo count] == 0) {
             homepage = self.homepage;
-        else {
+        } else {
             homepage = [[moreinfo[0] attributeForName:@"title"] stringValue];
-            NSInteger sep = [homepage rangeOfString:@" " options:NSBackwardsSearch].location;
-            homepage = [homepage substringFromIndex:sep+1];
+            NSUInteger sep1 = [homepage rangeOfString:@" " options:NSBackwardsSearch].location;
+            homepage = [homepage substringFromIndex:sep1+1];
             if (![homepage hasPrefix:@"http://"])
                 homepage = [@"http://" stringByAppendingString:homepage]; 
         }
-        NSArray *taglist = [node nodesForXPath:@"./ul/li" error:nil];
+        NSArray *taglist = [node0 nodesForXPath:@"./ul/li" error:nil];
         NSMutableArray *tags = [NSMutableArray array];
-        for (id node in taglist) {
-            [tags addObject:[node stringValue]];
+        for (id node1 in taglist) {
+            [tags addObject:[node1 stringValue]];
         }
         // NSString *category = 
         GItem *item = [[GItem alloc] initWithName:name

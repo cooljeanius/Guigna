@@ -5,8 +5,8 @@
 
 @interface GScrape : GSource
 
-@property(readwrite) NSInteger pageNumber;
-@property(readwrite) NSInteger itemsPerPage;
+@property(readwrite, atomic) NSInteger pageNumber;
+@property(readwrite, atomic) NSInteger itemsPerPage;
 
 - (id)initWithAgent:(GuignaAgent *)agent;
 @end

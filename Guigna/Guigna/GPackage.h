@@ -2,8 +2,8 @@
 
 @interface GPackage : GItem
 
-@property(strong) NSString *variants;
-@property(strong) NSString *markedVariants;
+@property(strong, atomic) NSString *variants;
+@property(strong, atomic) NSString *markedVariants;
 
 - (id)initWithName:(NSString *)name
            version:(NSString *)version

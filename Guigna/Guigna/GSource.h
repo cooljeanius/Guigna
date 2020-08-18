@@ -16,14 +16,14 @@ typedef enum _GMode {
 
 @interface GSource : NSObject
 
-@property(strong) NSString *name;
-@property(strong) NSMutableArray *categories;
-@property(strong) NSMutableArray *items;
-@property(readwrite) GState status;
-@property(readwrite) GMode mode;
-@property(strong) NSString *homepage;
-@property(strong) GuignaAgent *agent;
-@property(strong) NSString *cmd;
+@property(strong, atomic) NSString *name;
+@property(strong, atomic) NSMutableArray *categories;
+@property(strong, atomic) NSMutableArray *items;
+@property(readwrite, atomic) GState status;
+@property(readwrite, atomic) GMode mode;
+@property(strong, atomic) NSString *homepage;
+@property(strong, atomic) GuignaAgent *agent;
+@property(strong, atomic) NSString *cmd;
 
 - (id)initWithName:(NSString *)name agent:(GuignaAgent *)agent;
 - (id)initWithName:(NSString *)name;

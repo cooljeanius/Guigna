@@ -2,8 +2,8 @@
 
 @interface GuignaAgent : NSObject
 
-@property(retain) id appDelegate;
-@property(readwrite) int processID; // TODO: array of PIDs
+@property(retain, atomic) id appDelegate;
+@property(readwrite, atomic) int processID; // TODO: array of PIDs
 
 - (NSString *)outputForCommand:(NSString *)command;
 - (NSArray *)nodesForURL:(NSString *)url XPath:(NSString *)xpath;

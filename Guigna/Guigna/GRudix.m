@@ -25,11 +25,11 @@
             continue;
         NSString *URL = [[[columns[0] nodesForXPath:@"./a" error:nil][0] attributeForName:@"href"] stringValue];
         NSString *name = [columns[1] stringValue];
-        NSInteger sep = [name rangeOfString:@"-"].location;
+        NSUInteger sep = [name rangeOfString:@"-"].location;
         NSString *version = [name substringFromIndex:sep+1];
         version = [version substringToIndex:[version length]-4];
         if (![[NSCharacterSet decimalDigitCharacterSet] characterIsMember:[version characterAtIndex:0]]) {
-            NSInteger sep2 = [version rangeOfString:@"-"].location;
+            NSUInteger sep2 = [version rangeOfString:@"-"].location;
             version = [version substringFromIndex:sep2+1];
             sep += sep2+1;
         }

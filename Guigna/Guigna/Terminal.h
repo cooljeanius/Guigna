@@ -8,6 +8,12 @@
 
 @class TerminalApplication, TerminalWindow, TerminalSettingsSet, TerminalTab;
 
+#ifdef __clang__
+# pragma clang diagnostic push
+# pragma clang diagnostic ignored "-Wmultichar"
+# pragma clang diagnostic ignored "-Wfour-char-constants"
+#endif /* __clang__ */
+
 enum TerminalSaveOptions {
 	TerminalSaveOptionsYes = 'yes ' /* Save the file. */,
 	TerminalSaveOptionsNo = 'no  ' /* Do not save the file. */,
@@ -21,7 +27,9 @@ enum TerminalPrintingErrorHandling {
 };
 typedef enum TerminalPrintingErrorHandling TerminalPrintingErrorHandling;
 
-
+#ifdef __clang__
+# pragma clang diagnostic pop
+#endif /* __clang__ */
 
 /*
  * Standard Suite

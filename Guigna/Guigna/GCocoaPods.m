@@ -21,7 +21,7 @@
     [self.items removeAllObjects];
     for (NSString *pod in output) {
         NSArray *lines = [pod componentsSeparatedByString:@"\n"];
-        NSInteger sep = [lines[0] rangeOfString:@" (" options:NSBackwardsSearch].location;
+        NSUInteger sep = [lines[0] rangeOfString:@" (" options:NSBackwardsSearch].location;
         NSString *name = [lines[0] substringToIndex:sep];
         NSString *version = [lines[0] substringWithRange:NSMakeRange(sep+2, [lines[0] length]-sep-3)];
         GPackage *package = [[GPackage alloc] initWithName:name
@@ -30,7 +30,7 @@
                                                     status:GAvailableStatus];
         NSMutableString *description = [NSMutableString string];
         NSString *nextLine;
-        int i = 1;
+        NSUInteger i = 1;
         while (![(nextLine = [lines[i++] substringFromIndex:4]) hasPrefix:@"- "]) {
             if (i !=2)
                 [description appendString:@" "];
@@ -43,18 +43,20 @@
         [self.items addObject:package];
         (self.packagesIndex)[[package key]] = package;
     }
-    // TODO
-    //    for (GPackage *package in self.installed) {
-    //        ((GPackage *)[self.packagesIndex objectForKey:[package key]]).status = package.status;
-    //    }
+#ifdef TODO
+    for (GPackage *package in self.installed) {
+        ((GPackage *)[self.packagesIndex objectForKey:[package key]]).status = package.status;
+    }
+#endif /* TODO */
     return self.items;
 }
 
 
 - (NSArray *)installed {
     NSMutableArray *packages = [NSMutableArray array];
-    // TODO
+#ifndef TODO
     return packages;
+#else
     NSArray *outdated = [self outdated];
     NSMutableArray *output = [NSMutableArray arrayWithArray:[[self outputFor:@"%@ list", self.cmd] componentsSeparatedByString:@"\n"]];
     [output removeLastObject];
@@ -79,12 +81,14 @@
         [packages addObject:package];
     }
     return packages;
+#endif /* !TODO */
 }
 
 - (NSArray *)outdated {
     NSMutableArray *packages = [NSMutableArray array];
-    // TODO
+#ifndef TODO
     return packages;
+#else
     NSMutableArray *output = [NSMutableArray arrayWithArray:[[self outputFor:@"%@ outdated", self.cmd] componentsSeparatedByString:@"\n"]];
     [output removeLastObject];
     for (NSString *line in output) {
@@ -96,6 +100,7 @@
         [packages addObject:package];
     }
     return packages;
+#endif /* !TODO */
 }
 
 // TODO

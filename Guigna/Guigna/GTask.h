@@ -4,9 +4,9 @@
 
 @interface GTask : NSObject
 
-@property(weak) GItem *item;
-@property(strong) NSString *command;
-@property(readwrite) BOOL privileged;
+@property(weak, atomic) GItem *item;
+@property(strong, atomic) NSString *command;
+@property(readwrite, atomic) BOOL privileged;
 
 - (GMark)mark;
 - (GSystem *)system;

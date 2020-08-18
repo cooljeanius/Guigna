@@ -22,7 +22,7 @@
         for (NSString *line in lines) {
             NSArray *components = [line componentsSeparatedByString:@"|"];
             NSString *name = components[0];
-            NSInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
+            NSUInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
             if (sep == NSNotFound)
                 continue;
             NSString *version = [name substringFromIndex:sep+1];
@@ -51,7 +51,7 @@
             if ([dataRows count]== 0)
                 continue;
             NSString *name = [dataRows[0] stringValue];
-            NSInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
+            NSUInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
             if (sep == NSNotFound)
                 continue;
             NSString *version = [name substringWithRange:NSMakeRange(sep+1, [name length]-sep-3)];
@@ -90,9 +90,9 @@
     [ids removeLastObject];
     GStatus status;
     NSCharacterSet *whitespaceCharacterSet = [NSCharacterSet whitespaceCharacterSet];
-    int i = 0;
+    NSUInteger i = 0;
     for (NSString *line in output) {
-        NSInteger sep = [line rangeOfString:@" "].location;
+        NSUInteger sep = [line rangeOfString:@" "].location;
         NSString *name = [line substringToIndex:sep];
         NSString *description = [line substringFromIndex:sep+1];
         sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;

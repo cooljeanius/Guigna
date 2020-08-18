@@ -5,8 +5,8 @@
 
 @interface GSystem : GSource
 
-@property(strong) NSString *prefix;
-@property(strong) NSMutableDictionary *packagesIndex;
+@property(strong, atomic) NSString *prefix;
+@property(strong, atomic) NSMutableDictionary *packagesIndex;
 
 - (id)initWithAgent:(GuignaAgent *)agent;
 

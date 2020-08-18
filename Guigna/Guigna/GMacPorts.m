@@ -123,7 +123,7 @@
         NSString *name = components[0];
         NSString *version = [components[1] substringFromIndex:1];
         NSString *description = @"";
-        NSInteger sep = [version rangeOfString:@"+"].location;
+        NSUInteger sep = [version rangeOfString:@"+"].location;
         if (sep != NSNotFound) {
             description = [version substringFromIndex:sep];
             version = [version substringToIndex:sep];

@@ -21,7 +21,7 @@
     NSArray *nodes = [self.agent nodesForURL:url XPath:@"//div[@class=\"appinfo\"]"];
     for (id node in nodes) {
         NSString *name = [[node nodesForXPath:@"a" error:nil][0] stringValue];
-        NSInteger sep = [name rangeOfString:@" " options:NSBackwardsSearch].location;
+        NSUInteger sep = [name rangeOfString:@" " options:NSBackwardsSearch].location;
         NSString *version = @"";
         if (sep != NSNotFound) {
             version = [name substringFromIndex:sep+1];

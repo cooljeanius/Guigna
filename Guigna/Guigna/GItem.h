@@ -26,17 +26,17 @@ typedef enum _GMark {
 
 @interface GItem : NSObject  <NSCoding>
 
-@property(strong) NSString *name;
-@property(strong) NSString *version;
-@property(weak) GSource  *source;
-@property(readwrite) GStatus status;
-@property(weak) GSystem *system;
-@property(readwrite) GMark mark;
-@property(strong) NSString *ID;
-@property(strong) NSString *categories;
-@property(strong) NSString *description;
-@property(strong) NSString *homepage;
-@property(strong) NSString *URL;
+@property(strong, atomic) NSString *name;
+@property(strong, atomic) NSString *version;
+@property(weak, atomic) GSource  *source;
+@property(readwrite, atomic) GStatus status;
+@property(weak, atomic) GSystem *system;
+@property(readwrite, atomic) GMark mark;
+@property(strong, atomic) NSString *ID;
+@property(strong, atomic) NSString *categories;
+@property(strong, atomic) NSString *description;
+@property(strong, atomic) NSString *homepage;
+@property(strong, atomic) NSString *URL;
 
 - (id)initWithName:(NSString *)name
            version:(NSString *)version

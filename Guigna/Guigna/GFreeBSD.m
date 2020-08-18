@@ -22,7 +22,7 @@
         for (NSString *line in lines) {
             NSArray *components = [line componentsSeparatedByString:@"|"];
             NSString *name = components[0];
-            NSInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
+            NSUInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
             if (sep == NSNotFound)
                 continue;
             NSString *version = [name substringFromIndex:sep+1];
@@ -44,10 +44,10 @@
         id root =[self.agent nodesForURL:@"http://www.freebsd.org/ports/master-index.html" XPath:@"/*"][0];
         NSArray *names = [root nodesForXPath:@"//p/strong/a" error:nil];
         NSArray *descriptions = [root nodesForXPath:@"//p/em" error:nil];
-        int i = 0;
+        NSUInteger i = 0;
         for (id node in names) {
             NSString *name = [node stringValue];
-            NSInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
+            NSUInteger sep = [name rangeOfString:@"-" options:NSBackwardsSearch].location;
             NSString *version = [name substringFromIndex:sep+1];
             name = [name substringToIndex:sep];
             NSString *category = [[node attributeForName:@"href"] stringValue];
@@ -60,13 +60,17 @@
             package.categories = category;
             package.description = description;
             [self.items addObject:package];
-            // [self.packagesIndex setObject:package forKey:[package key]];
+#if 0
+            [self.packagesIndex setObject:package forKey:[package key]];
+#endif /* 0 */
             i++;
         }
     }
-    //    for (GPackage *package in self.installed) {
-    //        ((GPackage *)[self.packagesIndex objectForKey:[package key]]).status = package.status;
-    //    }
+#if 0
+    for (GPackage *package in self.installed) {
+        ((GPackage *)[self.packagesIndex objectForKey:[package key]]).status = package.status;
+    }
+#endif /* 0 */
     return self.items;
 }
 
